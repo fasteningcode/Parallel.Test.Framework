@@ -1,0 +1,13 @@
+language: csharp
+solution: Parallel.Test.Framework.sln
+
+install:
+  - nuget restore Parallel.Test.Framework.sln
+  - nuget install NUnit.Runners -Version 3.8.0 -OutputDirectory testrunner
+script:
+  - msbuild /p:Configuration=Release Parallel.Test.Framework.sln
+  - mono ./packages/NUnit.ConsoleRunner.3.8.0/tools/nunit3-console.exe ./Parallel.Test.FrameworkTests/bin/Release/Parallel.Test.FrameworkTests.dll
+  # - mono ./testrunner/NUnit.Runners.3.8.0/tools/nunit-console.exe ./Parallel.Test.FrameworkTests/bin/Release/Parallel.Test.FrameworkTests.dll
+
+
+                                
