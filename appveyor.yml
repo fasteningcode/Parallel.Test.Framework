@@ -6,6 +6,7 @@ clone_folder: C:\Projects\Parallel.Test.Framework
 build_script:
 - cmd: >-
     nuget restore
+
     msbuild Parallel.Test.Framework.sln /p:Configuration=Release
 test_script:
 - cmd: c:\Projects\Parallel.Test.Framework\packages\OpenCover.4.6.519\tools\OpenCover.Console.exe -register:aadhithB -target:"packages\NUnit.ConsoleRunner.3.8.0\tools\nunit3-console.exe" -targetargs:"c:\Projects\Parallel.Test.Framework\Parallel.Test.FrameworkTests\bin\Release\Parallel.Test.FrameworkTests.dll" -output:".\coverage.xml" -filter:"+[Parallel.Test.Framework*]* -[Parallel.Test.FrameworkTests*]*"
@@ -13,7 +14,7 @@ after_test:
   - ps: |
       $env:PATH = 'C:\Projects\Parallel.Test.Framework;' + $env:PATH
       Invoke-WebRequest -Uri 'https://codecov.io/bash' -OutFile codecov.sh
-      bash codecov.sh -F "coverage.xml" -t f9537881-dd22-4e98-878f-47d7643499bf
+      bash codecov.sh -s "coverage.xml" -t f9537881-dd22-4e98-878f-47d7643499bf      
 deploy:
 - provider: NuGet
   api_key:
