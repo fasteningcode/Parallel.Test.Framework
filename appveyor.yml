@@ -3,6 +3,8 @@ image: Visual Studio 2017
 configuration: Release
 platform: Any CPU
 clone_folder: C:\Projects\Parallel.Test.Framework
+before_build:
+- choco install codecov
 build_script:
 - cmd: >-
     nuget restore
@@ -10,11 +12,19 @@ build_script:
     msbuild Parallel.Test.Framework.sln /p:Configuration=Release
 test_script:
 - cmd: c:\Projects\Parallel.Test.Framework\packages\OpenCover.4.6.519\tools\OpenCover.Console.exe -register:aadhithB -target:"packages\NUnit.ConsoleRunner.3.8.0\tools\nunit3-console.exe" -targetargs:"c:\Projects\Parallel.Test.Framework\Parallel.Test.FrameworkTests\bin\Release\Parallel.Test.FrameworkTests.dll" -output:".\coverage.xml" -filter:"+[Parallel.Test.Framework*]* -[Parallel.Test.FrameworkTests*]*"
-after_test:
-  - ps: |
-      $env:PATH = 'C:\Projects\Parallel.Test.Framework;' + $env:PATH
-      Invoke-WebRequest -Uri 'https://codecov.io/bash' -OutFile codecov.sh
-      bash codecov.sh -s "coverage.xml" -t f9537881-dd22-4e98-878f-47d7643499bf      
+- codecov -f f9537881-dd22-4e98-878f-47d7643499bf
+# after_test:
+#   - ps: |
+
+#    choco install codecov
+# > .\codecov.exe -f "coverage.xml" -t f9537881-dd22-4e98-878f-47d7643499bf
+#     # #   $env:PATH = 'C:\Projects\Parallel.Test.Framework;' + $env:PATH
+#     #   curl -s https://codecov.io/bash > codecov
+#     #   chmod +x codecov
+#     #   ./codecov -f "MyProject_coverage.xml" -t <your upload token>
+#     #   Invoke-WebRequest -Uri 'https://codecov.io/bash' -OutFile codecov.sh
+#     #   bash <(curl -s https://codecov.io/bash)
+#       bash codecov.sh -s "coverage.xml" -t f9537881-dd22-4e98-878f-47d7643499bf      
 deploy:
 - provider: NuGet
   api_key:
