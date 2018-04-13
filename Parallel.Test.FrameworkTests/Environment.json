@@ -2,7 +2,7 @@
 	"TestEnv": [{
 			"EnvName": "qa",
 			"EnvDetails": [{
-				"DbConnStr": "Data Source=sql02;User id=aadhi;Password=Simple123;",
+				"DbConnStr": "Data Source=sql02;User id=aadhi;Password=Secret;",
 				"FrontEnd2":"https://www.google.com/",
 				"BackEndTest": "https://fasteningcode.local/backend"
 			}]
@@ -12,7 +12,7 @@
 			"EnvDetails": [{
 				"FrontEnd": "http://fasteningcode.com/",
 				"FrontEnd2":"https://www.google.com/",
-				"DbConnUnsecured": "Data Source=cmsql03;User id=sa;Password=Spirit001; Initial Catalog = ClearMatch_Ganges_UnsecuredLoan;"
+				"DbConnUnsecured": "Data Source=sql03;User id=Aadhi;Password=Secret; Initial Catalog = Catalog8055;"
 			}]
 		}
 	]
