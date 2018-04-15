@@ -9,9 +9,16 @@ An Open Source Public Project to run the tests. Framework is capable of handing 
 
 
 
+
     .NET Core as the framework
     GitHub as SCM
     AppVeyor as CI & CD
     OpenCover as Code Coverage Reporting Generator
     CodeCov as Code Coverage Repository
     NuGet as repository for project packages
+
+
+
+
+
+I would like to thank  Sauce Labs (https://saucelabs.com/content/images/logo.png)
