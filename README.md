@@ -22,4 +22,4 @@ An Open Source Public Project to run the tests. Framework is capable of handing 
 
 
 I would like to thank
- - ![Sauce Labs](https://saucelabs.com/content/images/logo.png) For Supporting the project with access to 5 VMs for testing in parallel and unlimited minutes.
+ - ![Sauce Labs](https://saucelabs.com/content/images/logo.png) for Supporting the project with access to VMs for testing in parallel and unlimited minutes.
