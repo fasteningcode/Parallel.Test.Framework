@@ -21,19 +21,19 @@
       <Classes />
     </Module>
     <Module skippedDueTo="Filter" hash="C1-08-CD-F2-59-9C-E6-0B-62-F9-09-43-74-9F-8D-57-9D-A9-93-31">
-      <ModulePath>C:\projects\Parallel.Test.Framework\packages\NUnit.ConsoleRunner.3.8.0\tools\nunit.engine.api.dll</ModulePath>
+      <ModulePath>C:\Projects\Parallel.Test.Framework\packages\NUnit.ConsoleRunner.3.8.0\tools\nunit.engine.api.dll</ModulePath>
       <ModuleTime>2018-01-26T22:27:14Z</ModuleTime>
       <ModuleName>nunit.engine.api</ModuleName>
       <Classes />
     </Module>
     <Module skippedDueTo="Filter" hash="95-2A-FF-98-B6-82-8F-7C-F0-AC-3D-56-5A-54-93-7D-3B-32-4F-7B">
-      <ModulePath>C:\projects\Parallel.Test.Framework\packages\NUnit.ConsoleRunner.3.8.0\tools\nunit.engine.dll</ModulePath>
+      <ModulePath>C:\Projects\Parallel.Test.Framework\packages\NUnit.ConsoleRunner.3.8.0\tools\nunit.engine.dll</ModulePath>
       <ModuleTime>2018-01-26T22:27:14Z</ModuleTime>
       <ModuleName>nunit.engine</ModuleName>
       <Classes />
     </Module>
     <Module skippedDueTo="Filter" hash="95-2A-FF-98-B6-82-8F-7C-F0-AC-3D-56-5A-54-93-7D-3B-32-4F-7B">
-      <ModulePath>C:\projects\Parallel.Test.Framework\packages\NUnit.ConsoleRunner.3.8.0\tools\nunit.engine.dll</ModulePath>
+      <ModulePath>C:\Projects\Parallel.Test.Framework\packages\NUnit.ConsoleRunner.3.8.0\tools\nunit.engine.dll</ModulePath>
       <ModuleTime>2018-01-26T22:27:14Z</ModuleTime>
       <ModuleName>nunit.engine</ModuleName>
       <Classes />
@@ -63,7 +63,7 @@
       <Classes />
     </Module>
     <Module skippedDueTo="Filter" hash="8A-2E-8F-D6-9D-39-02-4A-2F-30-FC-06-42-F7-0F-A8-32-69-07-72">
-      <ModulePath>C:\projects\Parallel.Test.Framework\packages\NUnit.ConsoleRunner.3.8.0\tools\Mono.Cecil.dll</ModulePath>
+      <ModulePath>C:\Projects\Parallel.Test.Framework\packages\NUnit.ConsoleRunner.3.8.0\tools\Mono.Cecil.dll</ModulePath>
       <ModuleTime>2018-01-26T22:27:14Z</ModuleTime>
       <ModuleName>Mono.Cecil</ModuleName>
       <Classes />
@@ -75,19 +75,19 @@
       <Classes />
     </Module>
     <Module skippedDueTo="Filter" hash="23-B3-8E-36-35-0B-BD-20-43-E0-A1-0E-D9-F4-93-5D-15-17-91-15">
-      <ModulePath>C:\projects\Parallel.Test.Framework\packages\NUnit.ConsoleRunner.3.8.0\tools\nunit-agent.exe</ModulePath>
+      <ModulePath>C:\Projects\Parallel.Test.Framework\packages\NUnit.ConsoleRunner.3.8.0\tools\nunit-agent.exe</ModulePath>
       <ModuleTime>2018-01-26T22:27:14Z</ModuleTime>
       <ModuleName>nunit-agent</ModuleName>
       <Classes />
     </Module>
     <Module skippedDueTo="Filter" hash="C1-08-CD-F2-59-9C-E6-0B-62-F9-09-43-74-9F-8D-57-9D-A9-93-31">
-      <ModulePath>C:\projects\Parallel.Test.Framework\packages\NUnit.ConsoleRunner.3.8.0\tools\nunit.engine.api.dll</ModulePath>
+      <ModulePath>C:\Projects\Parallel.Test.Framework\packages\NUnit.ConsoleRunner.3.8.0\tools\nunit.engine.api.dll</ModulePath>
       <ModuleTime>2018-01-26T22:27:14Z</ModuleTime>
       <ModuleName>nunit.engine.api</ModuleName>
       <Classes />
     </Module>
     <Module skippedDueTo="Filter" hash="95-2A-FF-98-B6-82-8F-7C-F0-AC-3D-56-5A-54-93-7D-3B-32-4F-7B">
-      <ModulePath>C:\projects\Parallel.Test.Framework\packages\NUnit.ConsoleRunner.3.8.0\tools\nunit.engine.dll</ModulePath>
+      <ModulePath>C:\Projects\Parallel.Test.Framework\packages\NUnit.ConsoleRunner.3.8.0\tools\nunit.engine.dll</ModulePath>
       <ModuleTime>2018-01-26T22:27:14Z</ModuleTime>
       <ModuleName>nunit.engine</ModuleName>
       <Classes />
@@ -123,7 +123,7 @@
       <Classes />
     </Module>
     <Module skippedDueTo="Filter" hash="8A-2E-8F-D6-9D-39-02-4A-2F-30-FC-06-42-F7-0F-A8-32-69-07-72">
-      <ModulePath>C:\projects\Parallel.Test.Framework\packages\NUnit.ConsoleRunner.3.8.0\tools\Mono.Cecil.dll</ModulePath>
+      <ModulePath>C:\Projects\Parallel.Test.Framework\packages\NUnit.ConsoleRunner.3.8.0\tools\Mono.Cecil.dll</ModulePath>
       <ModuleTime>2018-01-26T22:27:14Z</ModuleTime>
       <ModuleName>Mono.Cecil</ModuleName>
       <Classes />
@@ -1872,9 +1872,9 @@
       <Classes />
     </Module>
     <Module skippedDueTo="Filter" hash="">
-      <ModulePath>CompiledRazorTemplates.Dynamic.RazorEngine_59dbacfb42614098ad36b2894bf2ee0d.dll</ModulePath>
+      <ModulePath>CompiledRazorTemplates.Dynamic.RazorEngine_99a00d0525f846798fee90c5f49f4949.dll</ModulePath>
       <ModuleTime>0001-01-01T00:00:00</ModuleTime>
-      <ModuleName>CompiledRazorTemplates.Dynamic.RazorEngine_59dbacfb42614098ad36b2894bf2ee0d</ModuleName>
+      <ModuleName>CompiledRazorTemplates.Dynamic.RazorEngine_99a00d0525f846798fee90c5f49f4949</ModuleName>
       <Classes />
     </Module>
     <Module skippedDueTo="Filter" hash="">
@@ -1890,51 +1890,51 @@
       <Classes />
     </Module>
     <Module skippedDueTo="Filter" hash="">
-      <ModulePath>CompiledRazorTemplates.Dynamic.RazorEngine_75b7d304064a4549a30b42d249aa3c16.dll</ModulePath>
+      <ModulePath>CompiledRazorTemplates.Dynamic.RazorEngine_900eabdaea1849989140f97c967a5c9b.dll</ModulePath>
       <ModuleTime>0001-01-01T00:00:00</ModuleTime>
-      <ModuleName>CompiledRazorTemplates.Dynamic.RazorEngine_75b7d304064a4549a30b42d249aa3c16</ModuleName>
+      <ModuleName>CompiledRazorTemplates.Dynamic.RazorEngine_900eabdaea1849989140f97c967a5c9b</ModuleName>
       <Classes />
     </Module>
     <Module skippedDueTo="Filter" hash="">
-      <ModulePath>CompiledRazorTemplates.Dynamic.RazorEngine_f68d37e98a914fa1b54b09ba1778b380.dll</ModulePath>
+      <ModulePath>CompiledRazorTemplates.Dynamic.RazorEngine_477577c19ae44225948afe71d4f6c020.dll</ModulePath>
       <ModuleTime>0001-01-01T00:00:00</ModuleTime>
-      <ModuleName>CompiledRazorTemplates.Dynamic.RazorEngine_f68d37e98a914fa1b54b09ba1778b380</ModuleName>
+      <ModuleName>CompiledRazorTemplates.Dynamic.RazorEngine_477577c19ae44225948afe71d4f6c020</ModuleName>
       <Classes />
     </Module>
     <Module skippedDueTo="Filter" hash="">
-      <ModulePath>CompiledRazorTemplates.Dynamic.RazorEngine_11e096cbd2dd4f6aa192131a83efd2ea.dll</ModulePath>
+      <ModulePath>CompiledRazorTemplates.Dynamic.RazorEngine_73302aed741149798346c7f1efa130d1.dll</ModulePath>
       <ModuleTime>0001-01-01T00:00:00</ModuleTime>
-      <ModuleName>CompiledRazorTemplates.Dynamic.RazorEngine_11e096cbd2dd4f6aa192131a83efd2ea</ModuleName>
+      <ModuleName>CompiledRazorTemplates.Dynamic.RazorEngine_73302aed741149798346c7f1efa130d1</ModuleName>
       <Classes />
     </Module>
     <Module skippedDueTo="Filter" hash="">
-      <ModulePath>CompiledRazorTemplates.Dynamic.RazorEngine_ae308d4db54d4da08a7ca925539a4afa.dll</ModulePath>
+      <ModulePath>CompiledRazorTemplates.Dynamic.RazorEngine_7d821cc6570a4b008788cd03cd78daca.dll</ModulePath>
       <ModuleTime>0001-01-01T00:00:00</ModuleTime>
-      <ModuleName>CompiledRazorTemplates.Dynamic.RazorEngine_ae308d4db54d4da08a7ca925539a4afa</ModuleName>
+      <ModuleName>CompiledRazorTemplates.Dynamic.RazorEngine_7d821cc6570a4b008788cd03cd78daca</ModuleName>
       <Classes />
     </Module>
     <Module skippedDueTo="Filter" hash="">
-      <ModulePath>CompiledRazorTemplates.Dynamic.RazorEngine_517ecb430a694808b0fa5572d283191e.dll</ModulePath>
+      <ModulePath>CompiledRazorTemplates.Dynamic.RazorEngine_447aba04014f41648346d4814386801c.dll</ModulePath>
       <ModuleTime>0001-01-01T00:00:00</ModuleTime>
-      <ModuleName>CompiledRazorTemplates.Dynamic.RazorEngine_517ecb430a694808b0fa5572d283191e</ModuleName>
+      <ModuleName>CompiledRazorTemplates.Dynamic.RazorEngine_447aba04014f41648346d4814386801c</ModuleName>
       <Classes />
     </Module>
     <Module skippedDueTo="Filter" hash="">
-      <ModulePath>CompiledRazorTemplates.Dynamic.RazorEngine_69db821ce9694b6a86eff6e6febf44e4.dll</ModulePath>
+      <ModulePath>CompiledRazorTemplates.Dynamic.RazorEngine_55a7c618cc7041bdb9f13763464d9488.dll</ModulePath>
       <ModuleTime>0001-01-01T00:00:00</ModuleTime>
-      <ModuleName>CompiledRazorTemplates.Dynamic.RazorEngine_69db821ce9694b6a86eff6e6febf44e4</ModuleName>
+      <ModuleName>CompiledRazorTemplates.Dynamic.RazorEngine_55a7c618cc7041bdb9f13763464d9488</ModuleName>
       <Classes />
     </Module>
     <Module skippedDueTo="Filter" hash="">
-      <ModulePath>CompiledRazorTemplates.Dynamic.RazorEngine_285d393b4b544cd19802821a02002858.dll</ModulePath>
+      <ModulePath>CompiledRazorTemplates.Dynamic.RazorEngine_49b565507dbb4003b94f405f0ee04c88.dll</ModulePath>
       <ModuleTime>0001-01-01T00:00:00</ModuleTime>
-      <ModuleName>CompiledRazorTemplates.Dynamic.RazorEngine_285d393b4b544cd19802821a02002858</ModuleName>
+      <ModuleName>CompiledRazorTemplates.Dynamic.RazorEngine_49b565507dbb4003b94f405f0ee04c88</ModuleName>
       <Classes />
     </Module>
     <Module skippedDueTo="Filter" hash="">
-      <ModulePath>CompiledRazorTemplates.Dynamic.RazorEngine_5c4878f4ecda44c6b32b21297603aa03.dll</ModulePath>
+      <ModulePath>CompiledRazorTemplates.Dynamic.RazorEngine_98e443d22b83490da32f75ce458a0e3e.dll</ModulePath>
       <ModuleTime>0001-01-01T00:00:00</ModuleTime>
-      <ModuleName>CompiledRazorTemplates.Dynamic.RazorEngine_5c4878f4ecda44c6b32b21297603aa03</ModuleName>
+      <ModuleName>CompiledRazorTemplates.Dynamic.RazorEngine_98e443d22b83490da32f75ce458a0e3e</ModuleName>
       <Classes />
     </Module>
   </Modules>
