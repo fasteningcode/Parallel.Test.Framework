@@ -39,11 +39,11 @@ namespace Parallel.Test.Framework.Base.TestSettings {
             r.Add(TestSettingsConst.RunTest, xmlDoc.GetElementsByTagName(TestSettingsConst.RunTest)[0].InnerText);
             r.Add(TestSettingsConst.Browser, xmlDoc.GetElementsByTagName(TestSettingsConst.Browser)[0].InnerText);
             r.Add(TestSettingsConst.Version, xmlDoc.GetElementsByTagName(TestSettingsConst.Version)[0].InnerText);
-            r.Add(TestSettingsConst.OS, xmlDoc.GetElementsByTagName(TestSettingsConst.OS)[0].InnerText);
+            r.Add(TestSettingsConst.Os, xmlDoc.GetElementsByTagName(TestSettingsConst.Os)[0].InnerText);
             r.Add(TestSettingsConst.DeviceName, xmlDoc.GetElementsByTagName(TestSettingsConst.DeviceName)[0].InnerText);
             r.Add(TestSettingsConst.DeviceOrientation, xmlDoc.GetElementsByTagName(TestSettingsConst.DeviceOrientation)[0].InnerText);
-            r.Add(TestSettingsConst.username, xmlDoc.GetElementsByTagName(TestSettingsConst.username)[0].InnerText);
-            r.Add(TestSettingsConst.accessKey, xmlDoc.GetElementsByTagName(TestSettingsConst.accessKey)[0].InnerText);
+            r.Add(TestSettingsConst.Username, xmlDoc.GetElementsByTagName(TestSettingsConst.Username)[0].InnerText);
+            r.Add(TestSettingsConst.AccessKey, xmlDoc.GetElementsByTagName(TestSettingsConst.AccessKey)[0].InnerText);
             
             r.Add(TestSettingsConst.DefaultWaitinSeconds, xmlDoc.GetElementsByTagName("DefaultWaitinSeconds")[0].InnerText); 
             r.Add(TestSettingsConst.WaitForFirstElemtentinMinutes,

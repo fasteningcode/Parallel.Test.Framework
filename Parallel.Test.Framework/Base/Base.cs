@@ -35,7 +35,8 @@ namespace Parallel.Test.Framework.Base
         public void OneTimeTearDownTestSuite()
         {
             ExtentManager.Instance.Flush();
-            Process.Start(TestContext.CurrentContext.TestDirectory + ResourceConstants.ReportPath);
+            if(TestSettings[TestSettingsConst.RunTest]==RunTest.Local.ToString())
+                Process.Start(TestContext.CurrentContext.TestDirectory + ResourceConstants.ReportPath);
         }
 
 

@@ -27,17 +27,17 @@ namespace Parallel.Test.Framework.Base {
 
         public void OpenBrowser() {
             var runTests = TestSettings[TestSettingsConst.RunTest];
-            if (string.Equals(runTests, "Local", StringComparison.CurrentCultureIgnoreCase)) {
+            if (string.Equals(runTests, RunTest.Local.ToString(), StringComparison.CurrentCultureIgnoreCase)) {
                 var br = new Browser();
                 Driver = br.InitializeBrowser(Assembly.Directory, TestSettings[TestSettingsConst.Browser]);
                 Driver.Manage().Window.Maximize();
                 ExtentTestManager.GetTest().Log(Status.Info, "Opened Browser" + TestSettings[TestSettingsConst.Browser]);
             }
-            else if (string.Equals(runTests, "BrowserStack", StringComparison.CurrentCultureIgnoreCase)) {
+            else if (string.Equals(runTests, RunTest.BrowserStack.ToString(), StringComparison.CurrentCultureIgnoreCase)) {
                 var caps = new DesiredCapabilities();
                 var browser = TestSettings[TestSettingsConst.Browser]; //"chrome";
                 var version = TestSettings[TestSettingsConst.Version]; //"45";
-                var os = TestSettings[TestSettingsConst.OS]; //"Windows 7";
+                var os = TestSettings[TestSettingsConst.Os]; //"Windows 7";
                 var deviceName = TestSettings[TestSettingsConst.DeviceName]; //"";
                 var deviceOrientation = TestSettings[TestSettingsConst.DeviceOrientation]; //"";
                 caps.SetCapability(CapabilityType.BrowserName, browser);
@@ -45,8 +45,8 @@ namespace Parallel.Test.Framework.Base {
                 caps.SetCapability(CapabilityType.Platform, os);
                 caps.SetCapability("deviceName", deviceName);
                 caps.SetCapability("deviceOrientation", deviceOrientation);
-                caps.SetCapability("username", TestSettings[TestSettingsConst.username]); //"aadhithbose");
-                caps.SetCapability("accessKey", TestSettings[TestSettingsConst.accessKey]); //"1cc813ac-bec2-4dd8-9e9e-a239ec2e7c2c");
+                caps.SetCapability("username", TestSettings[TestSettingsConst.Username]); //"aadhithbose");
+                caps.SetCapability("accessKey", TestSettings[TestSettingsConst.AccessKey]); //"1cc813ac-bec2-4dd8-9e9e-a239ec2e7c2c");
                 caps.SetCapability("name", TestContext.CurrentContext.Test.Name);
 
                 Driver = new RemoteWebDriver(new Uri("http://ondemand.saucelabs.com:80/wd/hub"), caps, TimeSpan.FromSeconds(600));
