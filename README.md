@@ -1,6 +1,8 @@
 # Parallel.Test.Framework
 An Open Source Public Project to run the tests. Framework is capable of handing Test Data, Environments, Database, API etc..
 
+PTE is a ready to use automation framework which uses Kanban development model (Jira for PM as well as bug tracking). PTE uses Appveyor for Continuous Deployment to Nuget, OperCover for codecoverage, Codecov for code coverage repository. GitHub as SCM. 
+
 Code Coverage [![codecov](https://codecov.io/gh/fasteningcode/Parallel.Test.Framework/branch/master/graph/badge.svg)](https://codecov.io/gh/fasteningcode/Parallel.Test.Framework)
 
 Appveyor Build status [![Appveyor Build status](https://ci.appveyor.com/api/projects/status/vj2lk58t6mqnjf45/branch/master?svg=true)](https://ci.appveyor.com/project/fasteningcode/parallel-test-framework-gsa5h/branch/master)
