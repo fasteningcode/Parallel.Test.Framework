@@ -3,9 +3,9 @@ An Open Source Public Project to run the tests. Framework is capable of handing 
 
 [![codecov](https://codecov.io/gh/fasteningcode/Parallel.Test.Framework/branch/master/graph/badge.svg)](https://codecov.io/gh/fasteningcode/Parallel.Test.Framework)
 
-[![Build status](https://ci.appveyor.com/api/projects/status/vj2lk58t6mqnjf45/branch/master?svg=true)](https://ci.appveyor.com/project/fasteningcode/parallel-test-framework-gsa5h/branch/master)
+[![Appveyor Build status](https://ci.appveyor.com/api/projects/status/vj2lk58t6mqnjf45/branch/master?svg=true)](https://ci.appveyor.com/project/fasteningcode/parallel-test-framework-gsa5h/branch/master)
 
-[![Build Status](https://travis-ci.org/fasteningcode/Parallel.Test.Framework.svg?branch=master)](https://travis-ci.org/fasteningcode/Parallel.Test.Framework)
+[![Travis Build Status](https://travis-ci.org/fasteningcode/Parallel.Test.Framework.svg?branch=master)](https://travis-ci.org/fasteningcode/Parallel.Test.Framework)
 
 [![Sauce Test Status](https://saucelabs.com/buildstatus/aadhithbose)](https://saucelabs.com/u/aadhithbose)
 
