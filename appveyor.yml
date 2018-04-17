@@ -8,7 +8,7 @@ environment:
 
 assembly_info:
   patch: true
-  file: '.\Parallel.Test.Framework\Properties\AssemblyInfo.cs'
+  file: '**\AssemblyInfo.*' #'.\Parallel.Test.Framework\Properties\AssemblyInfo.cs'
   assembly_version: '{version}'
   assembly_file_version: '{version}'
   assembly_informational_version: '{version}'
@@ -87,8 +87,8 @@ artifacts:
   name: Nuget
   
 test_script:
-- cmd: C:\Projects\Parallel.Test.Framework\packages\OpenCover.4.6.519\tools\OpenCover.Console.exe -register:aadhithB -target:"packages\NUnit.ConsoleRunner.3.8.0\tools\nunit3-console.exe" -targetargs:"c:\Projects\Parallel.Test.Framework\Parallel.Test.FrameworkTests\bin\Release\Parallel.Test.FrameworkTests.dll" -output:".\coverage.xml" -filter:"+[Parallel.Test.Framework*]* -[Parallel.Test.FrameworkTests*]*"
-- C:\Projects\Parallel.Test.Framework\packages\Codecov.1.0.3\tools\codecov.exe -f C:\Projects\Parallel.Test.Framework\coverage.xml -t f9537881-dd22-4e98-878f-47d7643499bf
+- cmd: .\packages\OpenCover.4.6.519\tools\OpenCover.Console.exe -register:aadhithB -target:"packages\NUnit.ConsoleRunner.3.8.0\tools\nunit3-console.exe" -targetargs:".\Parallel.Test.FrameworkTests\bin\Release\Parallel.Test.FrameworkTests.dll" -output:".\coverage.xml" -filter:"+[Parallel.Test.Framework*]* -[Parallel.Test.FrameworkTests*]*"
+- .\packages\Codecov.1.0.3\tools\codecov.exe -f .\coverage.xml -t f9537881-dd22-4e98-878f-47d7643499bf
 
 #---------------------------------#
 #     deployment configuration    #
