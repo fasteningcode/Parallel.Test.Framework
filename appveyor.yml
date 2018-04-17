@@ -9,7 +9,7 @@ init:
 - ps: Update-AppveyorBuild -Version $env:buildVersion
 - echo This is batch
 - echo "$env:packageVersion-beta-$env:APPVEYOR_BUILD_NUMBER"
-- echo $(buildVersion)
+- echo '$(buildVersion)'
 - echo $(nugetVersion)
 
 assembly_info:
