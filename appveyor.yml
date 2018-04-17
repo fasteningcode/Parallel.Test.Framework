@@ -102,7 +102,7 @@ deploy:
   name: nuget_release
   api_key:
     secure: WizYwPCkltrtJ69ioh2yUFx5gsYhAc2fMAMtjXieAuRbBg/MXENC06BjOTghqELx
-  artifact: Nuget
+  artifact: /.*\.nupkg/
   on:
     branch: master
     
