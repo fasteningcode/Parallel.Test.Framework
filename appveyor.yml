@@ -38,7 +38,7 @@ after_build:
 - nuget pack ./Parallel.Test.Framework/Parallel.Test.Framework.nuspec -version "$env:nugetVersion"
 
 artifacts:
-- path: './Parallel.Test.Framework/Parallel.Test.Framework.1.0.0.nupkg'
+- path: 'Parallel.Test.Framework*.nupkg'
   name: nuget-package
   
 test_script:
