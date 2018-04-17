@@ -1,11 +1,11 @@
-version: 0.1.0.{build}
+version: 1.0.{build}
 
 environment:
-  packageVersion: 0.1.0
+  packageVersion: 1.0.
 
 init:
-- ps: $env:buildVersion = "$env:packageVersion.$env:appveyor_build_number"
-- ps: $env:nugetVersion = "$env:packageVersion-beta-$env:appveyor_build_number"
+- ps: $env:buildVersion = "$env:packageVersion.$env:APPVEYOR_BUILD_NUMBER"
+- ps: $env:nugetVersion = "$env:packageVersion-beta-$env:APPVEYOR_BUILD_NUMBER"
 - ps: Update-AppveyorBuild -Version $env:buildVersion
 
 assembly_info:
