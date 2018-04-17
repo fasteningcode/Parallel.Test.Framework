@@ -8,6 +8,7 @@ init:
 - ps: $env:nugetVersion = "$env:packageVersion-beta-$env:APPVEYOR_BUILD_NUMBER"
 - ps: Update-AppveyorBuild -Version $env:buildVersion
 - echo This is batch
+- echo "$env:packageVersion-beta-$env:APPVEYOR_BUILD_NUMBER"
 - echo $(buildVersion)
 - echo $(nugetVersion)
 
