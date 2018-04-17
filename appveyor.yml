@@ -17,14 +17,7 @@ init:
 - ps: $env:customBuildVersion = if ($env:APPVEYOR_REPO_TAG -eq $True) { "$env:APPVEYOR_BUILD_VERSION-$env:APPVEYOR_BUILD_NUMBER" } else { "$env:APPVEYOR_BUILD_VERSION-$env:APPVEYOR_BUILD_NUMBER-$env:APPVEYOR_REPO_BRANCH" }
 - ps: $env:customNugetVersion = if ($env:APPVEYOR_REPO_TAG -eq $True) { "$env:APPVEYOR_BUILD_VERSION" } else { "$env:APPVEYOR_BUILD_VERSION-pre" }
 - ps: Update-AppveyorBuild -Version $env:customBuildVersion
-
-assembly_info:
-  patch: true
-  file: '**\AssemblyInfo.*'
-  assembly_version: $(buildVersion)
-  assembly_file_version: $(buildVersion)
-  assembly_informational_version: $(nugetVersion)
-  
+ 
  
 # build cache to preserve files/folders between builds
 cache:
