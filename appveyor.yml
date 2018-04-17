@@ -35,7 +35,7 @@ build_script:
     msbuild Parallel.Test.Framework.sln /p:Configuration=Release
 
 after_build:
-- nuget pack ./Parallel.Test.Framework/Parallel.Test.Framework.nuspec -version "$env:nugetVersion"
+- nuget pack ./Parallel.Test.Framework/Parallel.Test.Framework.nuspec -version $(nugetVersion)
 
 artifacts:
 - path: 'Parallel.Test.Framework*.nupkg'
