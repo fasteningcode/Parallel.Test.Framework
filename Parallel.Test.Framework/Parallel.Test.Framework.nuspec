@@ -1,18 +1,18 @@
 <?xml version="1.0"?>
 <package >
   <metadata>
-    <id>1</id>
+    <id>Parallel.Test.Framework</id>
     <version>1.0.0</version>
     <title>Parallel.Test.Framework</title>
     <authors>Aadhith.Kalathil.Bose</authors>
     <owners>Aadhith.Kalathil.Bose</owners>
     <licenseUrl>https://github.com/fasteningcode/Parallel.Test.Framework/blob/master/LICENSE</licenseUrl>
     <projectUrl>https://github.com/fasteningcode/Parallel.Test.Framework</projectUrl>
-    <iconUrl>http://fasteningcode.com/wp-content/uploads/2018/03/fasteingcodeLogoFull.jpg</iconUrl>
+    <iconUrl>http://fasteningcode.com/wp-content/uploads/2018/04/FasteningCodeLogo.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Parallel Testing Framework</description>
     <!-- <releaseNotes>Summary of changes made in this release of the package.</releaseNotes> -->
     <copyright>Copyright 2018</copyright>
-    <tags>Parallel Test Framework Nunit Reports</tags>
+    <tags>Parallel Test Framework Nunit SauceLabs ExtentReports ReadyToUse TestingFramework</tags>
   </metadata>
 </package>
