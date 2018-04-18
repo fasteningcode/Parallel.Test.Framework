@@ -111,19 +111,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Base\Base.cs" />
-    <Compile Include="Base\BeforeEachTestCase.cs" />
+    <Compile Include="Base\TestSettings\BeforeEachTestCase.cs" />
     <Compile Include="Base\Reports\ExtentManager.cs" />
     <Compile Include="Base\Reports\ExtentTestManager.cs" />
     <Compile Include="Base\Reports\Report.cs" />
     <Compile Include="Base\TestSettings\Assembly.cs" />
     <Compile Include="Base\TestSettings\ConfigsBeforeEachTestCase.cs" />
     <Compile Include="Base\TestSettings\ConfigsBeforeEachTestSuite.cs" />
+    <Compile Include="Constants\Env.cs" />
     <Compile Include="Constants\ResourceConstants.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ResourceConstants.resx</DependentUpon>
     </Compile>
-    <Compile Include="Constants\Env.cs" />
     <Compile Include="Lib\DotNet\CustomStringLib.cs" />
     <Compile Include="Lib\DataBase\DbBase.cs" />
     <Compile Include="Lib\DataBase\DBExecute.cs" />

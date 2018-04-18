@@ -6,6 +6,7 @@ using NUnit.Framework.Interfaces;
 using Parallel.Test.Framework.Base.Reports;
 using Parallel.Test.Framework.Base.TestSettings;
 using Parallel.Test.Framework.Constants;
+using Parallel.Test.FrameworkTests;
 
 namespace Parallel.Test.Framework.Base
 {
@@ -25,8 +26,8 @@ namespace Parallel.Test.Framework.Base
         {
             var configsSuite = new ConfigsBeforeEachTestSuite();
             var AssemblyDirectory = Assembly.Directory;
-            TestSettings = configsSuite.TestSetup(AssemblyDirectory + "/TestSettings.xml");
-            Environment = configsSuite.ReadEnvironmentFromJson(Assembly.Directory + "/Environment.json", TestSettings[TestSettingsConst.Environment]);
+            TestSettings = configsSuite.TestSetup(AssemblyDirectory + "/TestSettings.json");
+            Environment = configsSuite.ReadEnvironmentFromJson(Assembly.Directory + "/Environment.json", TestSettings[TestSettingsConst.ENVIRONMENT]);
 
             ExtentTestManager.CreateParentTest(GetType().Name);
         }
@@ -35,7 +36,7 @@ namespace Parallel.Test.Framework.Base
         public void OneTimeTearDownTestSuite()
         {
             ExtentManager.Instance.Flush();
-            if(TestSettings[TestSettingsConst.RunTest]==RunTest.Local.ToString())
+            if(TestSettings[TestSettingsConst.RUNTEST]==RunTest.Local.ToString())
                 Process.Start(TestContext.CurrentContext.TestDirectory + ResourceConstants.ReportPath);
         }
 

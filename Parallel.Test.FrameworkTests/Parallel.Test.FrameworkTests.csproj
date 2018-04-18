@@ -113,10 +113,11 @@
     <None Include="Environment.json" />
     <None Include="license" />
     <None Include="packages.config" />
+    <None Include="TestSettings.json" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="extent-config.xml" />
-    <Content Include="TestSettings.xml">
+    <Content Include="TestSettingsDeleteMe.xml">
       <SubType>Designer</SubType>
     </Content>
   </ItemGroup>

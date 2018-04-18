@@ -1,5 +1,5 @@
-nuget pack Parallel.Test.Framework.csproj -properties Configuration=Release -version 1.0.0
+nuget pack Parallel.Test.Framework.csproj -properties Configuration=Release -version 0.0.48
 
-dotnet nuget push Parallel.Test.Framework.1.0.0.nupkg  -k nugetKeyPls  -s https://www.nuget.org/
+REM dotnet nuget push Parallel.Test.Framework.1.0.0.nupkg  -k nugetKeyPls  -s https://www.nuget.org/
 
 pause

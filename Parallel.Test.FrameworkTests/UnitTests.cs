@@ -29,6 +29,18 @@ namespace Parallel.Test.FrameworkTests {
             Console.WriteLine(Assembly.Directory);
         }
 
+        [Test]
+        public void ConfigsBeforeEachTestSuite_TestSetup() {
+            var testSetup = new ConfigsBeforeEachTestSuite();
+            var result = testSetup.TestSetup(Assembly.Directory + "/TestSettings.json");
+            
+            foreach (var v in result) {
+                Console.WriteLine(v.Key + " " + v.Value);
+            }
+            Assert.True(result != null);
+
+        }
+
 
         [Test]
         public new void Environment() {
