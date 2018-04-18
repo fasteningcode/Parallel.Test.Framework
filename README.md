@@ -27,6 +27,7 @@ Sauce Test Status [![Sauce Test Status](https://saucelabs.com/buildstatus/aadhit
 
 I would like to thank
  - ![Sauce Labs](https://saucelabs.com/content/images/logo.png) for Supporting the project with access to VMs for testing in parallel and unlimited minutes.
+ - Atlassian for [Jira and Confluence] (https://fasteningcode.atlassian.net)
 
 
 Interested ?. Join the [Slack Channel](https://join.slack.com/t/fasteningcode/shared_invite/enQtMzQ4MjI4MTI0MjU3LTEyNGI0OTI4MWU0ODlmZWU3YTVmNGY3Mjc0OGIyMGZmZmE0NWQyMjljMDgwNzAwOWVjMTE3MzM5ZGE5ZDIxMDU)
