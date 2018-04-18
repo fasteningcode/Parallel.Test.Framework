@@ -55,7 +55,7 @@ namespace Parallel.Test.FrameworkTests {
         public void TestData() {
             _.OpenBrowser();
             _.Driver.Navigate().GoToUrl(_.Environment["FrontEnd2"]);
-            _.FetchTestData(@"D:\Projects\Parallel.Test.Framework\Parallel.Test.FrameworkTests\testData1.json", "tc1", "1");
+            _.FetchTestData(Assembly.Directory+"\\testData1.json", "tc1", "1");
             _.Driver.FindElement(By.Name("q")).SendKeys(_.TestData["SearchQuery"]);
             _.Driver.FindElement(By.Name("q")).SendKeys(Keys.Enter);
             Assert.IsTrue(_.Driver.Title.Contains("fastening"));

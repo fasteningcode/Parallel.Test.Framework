@@ -18,7 +18,7 @@
 -->
 
   <!--  Local,BrowserStack-->
-  <RunTest>BrowserStack</RunTest>
+  <RunTest>Local</RunTest>
   <Browser>chrome</Browser>
   <!--Browser Stack Browser Version-->
   <Version>45</Version>
