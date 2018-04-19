@@ -24,15 +24,7 @@ namespace Parallel.Test.Framework.Base.TestSettings
                 path = path.Replace("\\bin\\x86\\Release", "");
                 path = path.Replace("\\bin\\x86\\Debug", "");
                 path = path.Replace("\\bin\\x86\\Dev", "");
-
-                path = path.Replace("/bin/Release", ""); // Change it to the folder that you want. 
-                path = path.Replace("/bin/Debug", "");
-                path = path.Replace("/bin/Dev", "");
-                path = path.Replace("/bin/x86/Release", "");
-                path = path.Replace("/bin/x86/Debug", "");
-                path = path.Replace("/bin/x86/Dev", "");
-
-
+                
                 path = path.Replace("\\", "/");
 
                 return path;

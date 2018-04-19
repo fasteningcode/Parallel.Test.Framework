@@ -97,9 +97,9 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="BrowserTests.cs" />
-    <Compile Include="SauceLabsTest.cs" />
-    <Compile Include="UnitTests.cs" />
+    <Compile Include="Tests\BrowserTests.cs" />
+    <Compile Include="Tests\SauceLabsTest.cs" />
+    <Compile Include="Tests\UnitTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -113,13 +113,11 @@
     <None Include="Environment.json" />
     <None Include="license" />
     <None Include="packages.config" />
-    <None Include="TestSettings.json" />
+    <None Include="Settings\Environment.json" />
+    <None Include="Settings\TestSettings.json" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="extent-config.xml" />
-    <Content Include="TestSettingsDeleteMe.xml">
-      <SubType>Designer</SubType>
-    </Content>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

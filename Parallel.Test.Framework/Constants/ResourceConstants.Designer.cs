@@ -61,7 +61,7 @@ namespace Parallel.Test.Framework.Constants {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to \\Reports\\report.html.
+        ///   Looks up a localized string similar to /Reports/report.html.
         /// </summary>
         internal static string ReportPath {
             get {
@@ -70,11 +70,20 @@ namespace Parallel.Test.Framework.Constants {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to \\Reports.
+        ///   Looks up a localized string similar to /Reports.
         /// </summary>
         internal static string ScreenshotPath {
             get {
                 return ResourceManager.GetString("ScreenshotPath", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to /Settings.
+        /// </summary>
+        internal static string SETTINGSPATH {
+            get {
+                return ResourceManager.GetString("SETTINGSPATH", resourceCulture);
             }
         }
     }

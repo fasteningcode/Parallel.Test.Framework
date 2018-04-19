@@ -118,9 +118,12 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="ReportPath" xml:space="preserve">
-    <value>\\Reports\\report.html</value>
+    <value>/Reports/report.html</value>
   </data>
   <data name="ScreenshotPath" xml:space="preserve">
-    <value>\\Reports</value>
+    <value>/Reports</value>
+  </data>
+  <data name="SETTINGSPATH" xml:space="preserve">
+    <value>/Settings</value>
   </data>
 </root>

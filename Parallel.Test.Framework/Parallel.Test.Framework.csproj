@@ -130,7 +130,7 @@
     <Compile Include="Lib\DotNet\DataHelpers.cs" />
     <Compile Include="Lib\DotNet\DotNetLib.cs" />
     <Compile Include="Base\Environment\Browser\Browser.cs" />
-    <Compile Include="Lib\Json\LoadJsonLib.cs" />
+    <Compile Include="Lib\Json\JsonLib.cs" />
     <Compile Include="Lib\Nunit\AssertionHelpers.cs" />
     <Compile Include="Lib\Selenium\WebElementExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
