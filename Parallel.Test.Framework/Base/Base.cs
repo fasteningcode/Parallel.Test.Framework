@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using AventStack.ExtentReports;
 using NUnit.Framework;
@@ -35,7 +36,7 @@ namespace Parallel.Test.Framework.Base
         public void OneTimeTearDownTestSuite()
         {
             ExtentManager.Instance.Flush();
-            if(TestSettings[TestSettingsConst.RUN_TEST]==RunTest.Local.ToString())
+            if(String.Equals(TestSettings[TestSettingsConst.RUN_TEST], RunTest.Local.ToString(), StringComparison.CurrentCultureIgnoreCase))
                 Process.Start(TestContext.CurrentContext.TestDirectory + ResourceConstants.ReportPath);
         }
 
