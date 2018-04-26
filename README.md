@@ -7,10 +7,11 @@ Code Coverage [![codecov](https://codecov.io/gh/fasteningcode/Parallel.Test.Fram
 
 Appveyor Build status [![Appveyor Build status](https://ci.appveyor.com/api/projects/status/vj2lk58t6mqnjf45/branch/master?svg=true)](https://ci.appveyor.com/project/fasteningcode/parallel-test-framework-gsa5h/branch/master)
 
+<!-- 
 Travis Build Status [![Travis Build Status](https://travis-ci.org/fasteningcode/Parallel.Test.Framework.svg?branch=master)](https://travis-ci.org/fasteningcode/Parallel.Test.Framework)
 
 Sauce Test Status [![Sauce Test Status](https://saucelabs.com/buildstatus/aadhithbose)](https://saucelabs.com/u/aadhithbose)]
-
+-->
 
 
 
