@@ -4,7 +4,7 @@
 		// START DONT CHANGE THE KEY BELOW
 		"ENVIRONMENT": "UAT",
 		//Available - LOCAL,SAUCE
-		"RUN_TEST": "LOCAL",
+		"RUN_TEST": "SAUCE",
 		"BROWSER": "CHROME",
 		"VERSION": "45",
 		"OS": "WINDOWS 7",

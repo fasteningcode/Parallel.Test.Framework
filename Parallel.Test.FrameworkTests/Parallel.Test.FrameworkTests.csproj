@@ -113,6 +113,7 @@
     <None Include="license" />
     <None Include="packages.config" />
     <None Include="Settings\Environment.json" />
+    <None Include="Settings\TestSettings.json" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="..\packages\WebDriver.GeckoDriver.0.19.0\content\geckodriver.exe">
