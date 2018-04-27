@@ -13,8 +13,8 @@ namespace Parallel.Test.Framework.Base.Reports
 
         static ExtentManager()
         {
-            var reportPath = ResourceConstants.ReportPath;
-            var htmlReporter = new ExtentHtmlReporter(TestContext.CurrentContext.TestDirectory + reportPath);
+            //var reportPath = ResourceConstants.ReportPath;
+            var htmlReporter = new ExtentHtmlReporter(TestContext.CurrentContext.TestDirectory + ResourceConstants.ReportPath);
             htmlReporter.Configuration().ChartLocation = ChartLocation.Top;
             htmlReporter.Configuration().ChartVisibilityOnOpen = true;
             htmlReporter.Configuration().DocumentTitle = "Parallel.Test.Framework";

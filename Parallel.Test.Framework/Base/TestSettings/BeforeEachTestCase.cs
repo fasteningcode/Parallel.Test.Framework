@@ -8,7 +8,6 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Remote;
 using Parallel.Test.Framework.Base.Environment.Browser;
 using Parallel.Test.Framework.Base.Reports;
-using Parallel.Test.Framework.Base.TestSettings;
 using Parallel.Test.Framework.Constants;
 using Parallel.Test.Framework.Lib.Json;
 
@@ -48,7 +47,7 @@ namespace Parallel.Test.Framework.Base {
             else
             { //if (string.Equals(runTests, RunTest.Local.ToString(), StringComparison.CurrentCultureIgnoreCase)) {
                 var br = new Browser();
-                driver = br.InitializeBrowser(Assembly.Directory, TestSettings[TestSettingsConst.BROWSER]);
+                driver = br.InitializeBrowser(TestSettings);
                 driver.Manage().Window.Maximize();
                 ExtentTestManager.GetTest().Log(Status.Info, "Opened Browser" + TestSettings[TestSettingsConst.BROWSER]);
             }

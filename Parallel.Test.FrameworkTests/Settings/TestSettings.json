@@ -19,7 +19,8 @@
 		"MS_BUILD_PATH": "C:/PROGRAM FILES (X86)/MSBUILD/14.0/BIN/MSBUILD.EXE",
 		"SOLUTION_NAME": "Parallel.Test.Framework.sln",
 		"NUNIT_PATH": "/PACKAGES/NUNIT.CONSOLERUNNER.3.8.0/TOOLS"
-		// START 
+		// STOP DONT CHANGE THE KEY ABOVE
 		// Can Create any other Key / Value Below
 	}
 }
+
