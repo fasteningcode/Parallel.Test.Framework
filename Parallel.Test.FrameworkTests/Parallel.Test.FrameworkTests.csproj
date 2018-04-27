@@ -110,7 +110,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="Environment.json" />
     <None Include="license" />
     <None Include="packages.config" />
     <None Include="Settings\Environment.json" />
