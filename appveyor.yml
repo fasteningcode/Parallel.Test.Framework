@@ -75,7 +75,7 @@ build_script:
    
 
 before_package:
--ps: nuget pack ".\Parallel.Test.Framework\Parallel.Test.Framework.csproj" -properties Configuration=Release -Version $env:customNugetVersion
+- ps: nuget pack ".\Parallel.Test.Framework\Parallel.Test.Framework.csproj" -properties Configuration=Release -Version $env:customNugetVersion
 #nuget pack Parallel.Test.Framework.csproj -properties Configuration=Release -version 1.0.0.67
 #- ps: nuget pack .\Parallel.Test.Framework\Parallel.Test.Framework.nuspec -Version $env:customNugetVersion
 
