@@ -17,3 +17,9 @@ packages\OpenCover.4.6.519\tools\OpenCover.Console.exe -register:aadhithB -targe
 
 
 packages\OpenCover.4.6.519\tools\OpenCover.Console.exe -register:user -target:"packages\xunit.runner.console.2.2.0\tools\xunit.console.x86.exe" -targetargs:"YourTestDLL -noshadow" -output:".\coverage.xml" -filter:"+[YourSUTNamepace*]* -[YourTestNamespace*]*"
+
+REM Build Solution
+"C:\Windows\Microsoft.NET\Framework\v4.0.30319\Msbuild.exe" "./Parallel.Test.Framework/Parallel.Test.Framework.csproj" /p:Configuration=Release
+
+"C:\Windows\Microsoft.NET\Framework\v4.0.30319\Msbuild.exe" "./Parallel.Test.FrameworkTests/Parallel.Test.FrameworkTests.csproj" /p:Configuration=Release
+
