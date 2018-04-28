@@ -71,12 +71,11 @@ before_build:
 build_script:
 - cmd: >-   
 
-    msbuild "./Parallel.Test.Framework/Parallel.Test.Framework.csproj" /p:Configuration=Release
-    msbuild "./Parallel.Test.FrameworkTests/Parallel.Test.FrameworkTests.csproj" /p:Configuration=Release
-
+    msbuild Parallel.Test.Framework.sln /p:Configuration=Release
+   
 
 after_build:
-- ps: nuget pack .\Parallel.Test.Framework\Parallel.Test.Framework.csproj -properties Configuration=Release -Version $env:customNugetVersion
+- ps: nuget pack ".\Parallel.Test.Framework\Parallel.Test.Framework.csproj" -properties Configuration=Release -Version $env:customNugetVersion
 #nuget pack Parallel.Test.Framework.csproj -properties Configuration=Release -version 1.0.0.67
 #- ps: nuget pack .\Parallel.Test.Framework\Parallel.Test.Framework.nuspec -Version $env:customNugetVersion
 
