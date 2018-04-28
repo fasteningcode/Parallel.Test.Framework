@@ -59,6 +59,7 @@ namespace Parallel.Test.Framework.Base {
         public void CloseBrowser(IWebDriver driver) {
             ExtentTestManager.GetTest().Log(Status.Info, "", MediaEntityBuilder.CreateScreenCaptureFromPath(driver.Capture()).Build());
             driver.Quit();
+
         }
 
         public void FetchTestData(string testSource, string testCaseId, string testDataNo) {
