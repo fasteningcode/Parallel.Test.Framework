@@ -82,6 +82,9 @@ before_package:
 #---------------------------------#
 #      artifacts configuration    #
 #---------------------------------#
+before_deploy:
+- cmd: nuget pack ".\Parallel.Test.Framework\Parallel.Test.Framework.csproj" -properties Configuration=Release -Version $env:customNugetVersion
+
 
 artifacts:
   # pushing all *.nupkg files in build directory recursively
@@ -98,6 +101,7 @@ test_script:
 
 # providers: Local, FTP, WebDeploy, AzureCS, AzureBlob, S3, NuGet, Environment
 # provider names are case-sensitive!
+
 
 deploy:
 - provider: NuGet
