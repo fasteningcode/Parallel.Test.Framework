@@ -1,0 +1,27 @@
+{
+	"SETUP": {
+		
+		// START DONT CHANGE THE KEY BELOW
+		"ENVIRONMENT": "uat1",
+		//Available - LOCAL,SAUCE
+		"RUN_TEST": "LOCAL",
+		"BROWSER": "CHROME",
+		"VERSION": "45",
+		"OS": "WINDOWS 7",
+		"DEVICENAME": "",
+		"DEVICEORIENTATION": "",
+		"USERNAME_SAUCE": "aadhithbose",
+		"ACCESS_KEY_SAUCE": "1cc813ac-bec2-4dd8-9e9e-a239ec2e7c2c",
+		"WAIT_SEC": "180",
+		"TIMEOUT_MIN": "3",
+		"BATCH_FILE_DIRECTORY": "C:/TESTSUITE",
+		"TEMP_FOLDER": "C:/TEMP_FOLDER",
+		"MS_BUILD_PATH": "C:/PROGRAM FILES (X86)/MSBUILD/14.0/BIN/MSBUILD.EXE",
+		"SOLUTION_NAME": "Parallel.Test.Framework.sln",
+		"NUNIT_PATH": "/PACKAGES/NUNIT.CONSOLERUNNER.3.8.0/TOOLS"
+		// STOP DONT CHANGE THE KEY ABOVE
+		// Can Create any other Key / Value Below
+	}
+}
+
+

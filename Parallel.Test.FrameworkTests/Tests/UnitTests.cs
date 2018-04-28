@@ -56,7 +56,7 @@ namespace Parallel.Test.FrameworkTests.Tests {
             Console.WriteLine(value);
             Assert.IsTrue(value != null);
         }
-#if (DEBUG)
+#if (!DEBUG)
         [Test]
 #endif
         public void TestData() {
@@ -68,7 +68,7 @@ namespace Parallel.Test.FrameworkTests.Tests {
             Assert.IsTrue(driver.Title.Contains("fastening"));
             _.CloseBrowser(driver);
         }
-#if (DEBUG)
+#if (!DEBUG)
         [Test]
 #endif
         public void ConfigsBeforeEachTestSuite_TestSetup() {
