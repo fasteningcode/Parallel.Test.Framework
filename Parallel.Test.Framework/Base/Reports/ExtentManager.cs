@@ -23,7 +23,7 @@ namespace Parallel.Test.Framework.Base.Reports
             Instance.AttachReporter(htmlReporter);
         }
 
-        private ExtentManager() { }
+        //private ExtentManager() { }
 
         public static ExtentReports Instance => _lazy.Value;
     }
