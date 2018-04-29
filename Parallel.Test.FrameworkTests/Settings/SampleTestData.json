@@ -1,0 +1,18 @@
+{
+	"TestCases": [{
+		"TestCaseId": "tc1",
+		"TestName": "sample test ma,e",
+		"TetDescription": "sample Test Description ",
+		"TestRow": [{
+				"RowNumber": "1",
+				"TestData": [{
+					"username": "john",
+					"password": "john"
+				}]
+			}
+
+		]
+	}],
+	"RegressionSuite": "1,2",
+	"SanitySuite": "1"
+}

@@ -61,11 +61,12 @@ namespace Parallel.Test.FrameworkTests.Tests {
 #endif
         public void TestData() {
             var driver = _.OpenBrowser();
-            driver.Navigate().GoToUrl(_.Environment["FrontEnd2"]);
-            _.FetchTestData(Assembly.Directory + "/testData1.json", "tc1", "1");
-            driver.FindElement(By.Name("q")).SendKeys(_.TestData["SearchQuery"]);
-            driver.FindElement(By.Name("q")).SendKeys(Keys.Enter);
-            Assert.IsTrue(driver.Title.Contains("fastening"));
+            driver.Navigate().GoToUrl(_.Environment["FrontEnd"]);
+            _.FetchTestData(Assembly.Directory + "/Settings/SampleTestData.json", "tc1", "1");
+            driver.FindElement(By.XPath("/html/body/form/input[1]")).SendKeys(_.TestData["username"]);
+            driver.FindElement(By.XPath("/html/body/form/input[2]")).SendKeys(_.TestData["password"]);
+            driver.FindElement(By.XPath("/html/body/form/input[3]")).Click();
+            Assert.IsTrue(driver.FindElement(By.XPath("/html/body/h1")).Text.Contains("Welcome"));
             _.CloseBrowser(driver);
         }
 #if (!DEBUG)

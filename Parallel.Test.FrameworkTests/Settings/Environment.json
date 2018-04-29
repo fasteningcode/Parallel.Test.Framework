@@ -9,8 +9,7 @@
 					"DbConnStr": "Data Source=sql02;User id=aadhi;Password=Secret;"
 				}
 			]
-		},
-		{
+		},{
 			"EnvName": "uat1",
 			"EnvDetails": [
 				{

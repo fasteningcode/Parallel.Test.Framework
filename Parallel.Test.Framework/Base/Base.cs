@@ -28,6 +28,7 @@ namespace Parallel.Test.Framework.Base
             var AssemblyDirectory = Assembly.Directory;
             TestSettings = configsSuite.TestSetup(AssemblyDirectory + ResourceConstants.SETTINGSPATH + "/TestSettings.json");
             Environment = configsSuite.ReadEnvironmentFromJson(Assembly.Directory + ResourceConstants.SETTINGSPATH + "/Environment.json", TestSettings[TestSettingsConst.ENVIRONMENT]);
+            configsSuite.CreateSampleData(AssemblyDirectory + ResourceConstants.SETTINGSPATH + "/SampleTestData.json");
 
             ExtentTestManager.CreateParentTest(GetType().Name);
         }

@@ -112,8 +112,6 @@
     <None Include="app.config" />
     <None Include="license" />
     <None Include="packages.config" />
-    <None Include="Settings\Environment.json" />
-    <None Include="Settings\TestSettings.json" />
     <None Include="Settings\_Environment.json" />
     <None Include="Settings\_TestSettings.json" />
   </ItemGroup>

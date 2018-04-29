@@ -10,8 +10,12 @@ using Parallel.Test.Framework.Lib.Json;
 namespace Parallel.Test.Framework.Base.TestSettings {
     public class ConfigsBeforeEachTestSuite {
         public Dictionary<string, string> ReadEnvironmentFromJson(string envJsonPath, string envName) {
+            var s =
+                "{\r\n\t\"TestEnv\": [\r\n\t\t{\r\n\t\t\t\"EnvName\": \"qa1\",\r\n\t\t\t\"EnvDetails\": [\r\n\t\t\t\t{\r\n\t\t\t\t\t\"FrontEnd\": \"http://qa1.fasteningcode.com\",\r\n\t\t\t\t\t\"BackEndTest\": \"https://qa1.fasteningcode.com/backend\",\r\n\t\t\t\t\t\"DbConnStr\": \"Data Source=sql02;User id=aadhi;Password=Secret;\"\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t},{\r\n\t\t\t\"EnvName\": \"uat1\",\r\n\t\t\t\"EnvDetails\": [\r\n\t\t\t\t{\r\n\t\t\t\t\t\"FrontEnd\": \"http://uat1.fasteningcode.com\",\r\n\t\t\t\t\t\"BackEndTest\": \"https://uat1.fasteningcode.com/backend\",\r\n\t\t\t\t\t\"DbConnStr\": \"Data Source=sql02;User id=aadhi;Password=Secret;\"\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t}\n\t]\r\n}";
 
-            var value = "{\r\n\t\"TestEnv\": [{\r\n\t\t\t\"EnvName\": \"qa1\",\r\n\t\t\t\"EnvDetails\": [{\r\n\t\t\t\t\"DbConnStr\": \"Data Source=sql02;User id=aadhi;Password=Secret;\",\r\n\t\t\t\t\"FrontEnd2\":\"https://www.google.com/\",\r\n\t\t\t\t\"BackEndTest\": \"https://fasteningcode.local/backend\"\r\n\t\t\t}]\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"EnvName\": \"UAT\",\r\n\t\t\t\"EnvDetails\": [{\r\n\t\t\t\t\"FrontEnd\": \"http://fasteningcode.com/\",\r\n\t\t\t\t\"FrontEnd2\":\"https://www.google.com/\",\r\n\t\t\t\t\"DbConnUnsecured\": \"Data Source=sql03;User id=Aadhi;Password=Secret; Initial Catalog = Catalog8055;\"\r\n\t\t\t}]\r\n\t\t}\r\n\t]\r\n}";
+
+            var value = s;//+ s1 + s2;
+                //"{\r\n\t\"TestEnv\": [{\r\n\t\t\t\"EnvName\": \"qa1\",\r\n\t\t\t\"EnvDetails\": [{\r\n\t\t\t\t\"DbConnStr\": \"Data Source=sql02;User id=aadhi;Password=Secret;\",\r\n\t\t\t\t\"FrontEnd2\":\"https://www.google.com/\",\r\n\t\t\t\t\"BackEndTest\": \"https://fasteningcode.local/backend\"\r\n\t\t\t}]\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"EnvName\": \"UAT\",\r\n\t\t\t\"EnvDetails\": [{\r\n\t\t\t\t\"FrontEnd\": \"http://fasteningcode.com/\",\r\n\t\t\t\t\"FrontEnd2\":\"https://www.google.com/\",\r\n\t\t\t\t\"DbConnUnsecured\": \"Data Source=sql03;User id=Aadhi;Password=Secret; Initial Catalog = Catalog8055;\"\r\n\t\t\t}]\r\n\t\t}\r\n\t]\r\n}";
             Create_TestSettingsFileIfItDidntExists(envJsonPath, value);
 
             var data = new Dictionary<string, string>();
@@ -61,6 +65,7 @@ namespace Parallel.Test.Framework.Base.TestSettings {
 
         private static void Create_TestSettingsFileIfItDidntExists(string path, string value) {
 
+
             if (!Directory.Exists(Assembly.Directory + ResourceConstants.SETTINGSPATH))
                 Directory.CreateDirectory(Assembly.Directory + ResourceConstants.SETTINGSPATH);
             
@@ -74,6 +79,12 @@ namespace Parallel.Test.Framework.Base.TestSettings {
                     w.Close();
                 }
             }
+        }
+
+        public void CreateSampleData(string testSettingsPath) {
+
+            var value = "{\r\n\t\"TestCases\": [{\r\n\t\t\"TestCaseId\": \"tc1\",\r\n\t\t\"TestName\": \"sample test ma,e\",\r\n\t\t\"TetDescription\": \"sample Test Description \",\r\n\t\t\"TestRow\": [{\r\n\t\t\t\t\"RowNumber\": \"1\",\r\n\t\t\t\t\"TestData\": [{\r\n\t\t\t\t\t\"username\": \"john\",\r\n\t\t\t\t\t\"password\": \"john\"\r\n\t\t\t\t}]\r\n\t\t\t}\r\n\r\n\t\t]\r\n\t}],\r\n\t\"RegressionSuite\": \"1,2\",\r\n\t\"SanitySuite\": \"1\"\r\n}";
+            Create_TestSettingsFileIfItDidntExists(testSettingsPath, value);
         }
     }
 }
