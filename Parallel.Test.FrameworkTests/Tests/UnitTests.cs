@@ -9,7 +9,7 @@ using Parallel.Test.Framework.Lib.DataBase;
 namespace Parallel.Test.FrameworkTests.Tests {
     [TestFixture]
     [Parallelizable]
-    public class UnitTests : Base {
+    public class UnitTests : Framework.Base.Base {
 #if (DEBUG)
         [Test]
 #endif
@@ -27,9 +27,10 @@ namespace Parallel.Test.FrameworkTests.Tests {
 
 #if (!DEBUG)
         [Test]
+        [Category("UnitTest")]
 #endif
         public void DirectoryTest() {
-            Console.WriteLine(Assembly.Directory);
+            Console.WriteLine(ExecutionAssembly.Directory);
         }
 
 #if (!DEBUG)
@@ -38,9 +39,9 @@ namespace Parallel.Test.FrameworkTests.Tests {
         public void ReadEnvironmentFromJson() {
 
             var testConfigs = new ConfigsBeforeEachTestSuite();
-            var env = testConfigs.ReadEnvironmentFromJson(Assembly.Directory + "/Environment.json", "UAT");
+            var env = testConfigs.ReadEnvironmentFromJson(ExecutionAssembly.Directory + "/Environment.json", "UAT");
             foreach (var keyValuePair in env) {
-                Console.WriteLine(keyValuePair.Key + " " + keyValuePair.Value);
+                Console.WriteLine(keyValuePair.Key + @" " + keyValuePair.Value);
                 if (keyValuePair.Key == "FrontEnd")
                     Assert.AreEqual(keyValuePair.Value, "http://fasteningcode.com/");
             }
@@ -59,10 +60,10 @@ namespace Parallel.Test.FrameworkTests.Tests {
 #if (!DEBUG)
         [Test]
 #endif
-        public void TestData() {
+        public void TestDataJson() {
             var driver = _.OpenBrowser();
             driver.Navigate().GoToUrl(_.Environment["FrontEnd"]);
-            _.FetchTestData(Assembly.Directory + "/Settings/SampleTestData.json", "tc1", "1");
+            _.FetchTestData(ExecutionAssembly.Directory + "/Settings/SampleTestData.json", "tc1", "1");
             driver.FindElement(By.XPath("/html/body/form/input[1]")).SendKeys(_.TestData["username"]);
             driver.FindElement(By.XPath("/html/body/form/input[2]")).SendKeys(_.TestData["password"]);
             driver.FindElement(By.XPath("/html/body/form/input[3]")).Click();
@@ -72,11 +73,26 @@ namespace Parallel.Test.FrameworkTests.Tests {
 #if (!DEBUG)
         [Test]
 #endif
+        public void TestDataCsv()
+        {
+            var driver = _.OpenBrowser();
+            driver.Navigate().GoToUrl(_.Environment["FrontEnd"]);
+            _.FetchTestData(ExecutionAssembly.Directory + "/Settings/SampleTestData.csv", "tc1", "1");
+            driver.FindElement(By.XPath("/html/body/form/input[1]")).SendKeys(_.TestData["username"]);
+            driver.FindElement(By.XPath("/html/body/form/input[2]")).SendKeys(_.TestData["password"]);
+            driver.FindElement(By.XPath("/html/body/form/input[3]")).Click();
+            Assert.IsTrue(driver.FindElement(By.XPath("/html/body/h1")).Text.Contains("Welcome"));
+            _.CloseBrowser(driver);
+        }
+
+#if (!DEBUG)
+        [Test]
+#endif
         public void ConfigsBeforeEachTestSuite_TestSetup() {
             var testSetup = new ConfigsBeforeEachTestSuite();
-            var result = testSetup.TestSetup(Assembly.Directory + "/TestSettings.json");
+            var result = testSetup.TestSetup(ExecutionAssembly.Directory + "/TestSettings.json");
 
-            foreach (var v in result) Console.WriteLine(v.Key + " " + v.Value);
+            foreach (var v in result) Console.WriteLine(v.Key + @" " + v.Value);
             Assert.True(result != null);
         }
     }

@@ -6,38 +6,38 @@ using OpenQA.Selenium.Remote;
 namespace Parallel.Test.FrameworkTests.Tests
 {
     [TestFixture("chrome", "45", "Windows 7", "", "")]
-    public class SauceNUnit_Test
+    public class SauceNUnitTest
     {
-        private IWebDriver driver;
-        private String browser;
-        private String version;
-        private String os;
-        private String deviceName;
-        private String deviceOrientation;
+        private IWebDriver _driver;
+        private String _browser;
+        private String _version;
+        private String _os;
+        private String _deviceName;
+        private String _deviceOrientation;
 
-        public SauceNUnit_Test(String browser, String version, String os, String deviceName, String deviceOrientation)
+        public SauceNUnitTest(String browser, String version, String os, String deviceName, String deviceOrientation)
         {
-            this.browser = browser;
-            this.version = version;
-            this.os = os;
-            this.deviceName = deviceName;
-            this.deviceOrientation = deviceOrientation;
+            _browser = browser;
+            _version = version;
+            _os = os;
+            _deviceName = deviceName;
+            _deviceOrientation = deviceOrientation;
         }
 
         [SetUp]
         public void Init()
         {
             DesiredCapabilities caps = new DesiredCapabilities();
-            caps.SetCapability(CapabilityType.BrowserName, browser);
-            caps.SetCapability(CapabilityType.Version, version);
-            caps.SetCapability(CapabilityType.Platform, os);
-            caps.SetCapability("deviceName", deviceName);
-            caps.SetCapability("deviceOrientation", deviceOrientation);
+            caps.SetCapability(CapabilityType.BrowserName, _browser);
+            caps.SetCapability(CapabilityType.Version, _version);
+            caps.SetCapability(CapabilityType.Platform, _os);
+            caps.SetCapability("deviceName", _deviceName);
+            caps.SetCapability("deviceOrientation", _deviceOrientation);
             caps.SetCapability("username", "aadhithbose");
             caps.SetCapability("accessKey", "1cc813ac-bec2-4dd8-9e9e-a239ec2e7c2c");
             caps.SetCapability("name", TestContext.CurrentContext.Test.Name);
 
-            driver = new RemoteWebDriver(new Uri("http://ondemand.saucelabs.com:80/wd/hub"), caps, TimeSpan.FromSeconds(600));
+            _driver = new RemoteWebDriver(new Uri("http://ondemand.saucelabs.com:80/wd/hub"), caps, TimeSpan.FromSeconds(600));
 
 
         }
@@ -45,11 +45,11 @@ namespace Parallel.Test.FrameworkTests.Tests
 #if (!DEBUG)
         [Test]
 #endif
-        public void googleTest()
+        public void GoogleTest()
         {
-            driver.Navigate().GoToUrl("http://www.google.com");
-            StringAssert.Contains("Google", driver.Title);
-            IWebElement query = driver.FindElement(By.Name("q"));
+            _driver.Navigate().GoToUrl("http://www.google.com");
+            StringAssert.Contains("Google", _driver.Title);
+            IWebElement query = _driver.FindElement(By.Name("q"));
             query.SendKeys("Sauce Labs");
             query.Submit();
         }
@@ -61,12 +61,12 @@ namespace Parallel.Test.FrameworkTests.Tests
             try
             {
                 // Logs the result to Sauce Labs
-                ((IJavaScriptExecutor)driver).ExecuteScript("sauce:job-result=" + (passed ? "passed" : "failed"));
+                ((IJavaScriptExecutor)_driver).ExecuteScript("sauce:job-result=" + (passed ? "passed" : "failed"));
             }
             finally
             {
                 // Terminates the remote webdriver session
-                driver.Quit();
+                _driver.Quit();
             }
         }
     }

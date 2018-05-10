@@ -1,13 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Parallel.Test.Framework.Base.TestSettings
 {
-    public class Assembly
+    public class ExecutionAssembly
     {
         public static string Directory
         {

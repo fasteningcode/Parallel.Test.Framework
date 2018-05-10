@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
+using System.Reflection;
 using AventStack.ExtentReports;
 using NUnit.Framework;
 using NUnit.Framework.Interfaces;
@@ -25,10 +27,11 @@ namespace Parallel.Test.Framework.Base
         public void OneTimeSetupTestSuite()
         {
             var configsSuite = new ConfigsBeforeEachTestSuite();
-            var AssemblyDirectory = Assembly.Directory;
-            TestSettings = configsSuite.TestSetup(AssemblyDirectory + ResourceConstants.SETTINGSPATH + "/TestSettings.json");
-            Environment = configsSuite.ReadEnvironmentFromJson(Assembly.Directory + ResourceConstants.SETTINGSPATH + "/Environment.json", TestSettings[TestSettingsConst.ENVIRONMENT]);
-            configsSuite.CreateSampleData(AssemblyDirectory + ResourceConstants.SETTINGSPATH + "/SampleTestData.json");
+            var assemblyDirectory = ExecutionAssembly.Directory;
+            TestSettings = configsSuite.TestSetup(assemblyDirectory + ResourceConstants.SETTINGSPATH + "/TestSettings.json");
+            Environment = configsSuite.ReadEnvironmentFromJson(ExecutionAssembly.Directory + ResourceConstants.SETTINGSPATH + "/Environment.json", TestSettings[TestSettingsConst.ENVIRONMENT]);
+            configsSuite.CreateSampleDataJson(assemblyDirectory + ResourceConstants.SETTINGSPATH + "/SampleTestData.json");
+            configsSuite.CreateSampleDataCsv(assemblyDirectory + ResourceConstants.SETTINGSPATH + "/SampleTestData.csv");
 
             ExtentTestManager.CreateParentTest(GetType().Name);
         }
@@ -75,5 +78,8 @@ namespace Parallel.Test.Framework.Base
             }
             ExtentTestManager.GetTest().Log(logstatus, "Test ended with " + logstatus + stacktrace);
         }
+        
     }
+
+    
 }

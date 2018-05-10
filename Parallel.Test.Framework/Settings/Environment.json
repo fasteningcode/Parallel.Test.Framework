@@ -1,0 +1,23 @@
+{
+	"TestEnv": [
+		{
+			"EnvName": "qa1",
+			"EnvDetails": [
+				{
+					"FrontEnd": "http://qa1.fasteningcode.com",
+					"BackEndTest": "https://qa1.fasteningcode.com/backend",
+					"DbConnStr": "Data Source=sql02;User id=aadhi;Password=Secret;"
+				}
+			]
+		},{
+			"EnvName": "uat1",
+			"EnvDetails": [
+				{
+					"FrontEnd": "http://uat1.fasteningcode.com",
+					"BackEndTest": "https://uat1.fasteningcode.com/backend",
+					"DbConnStr": "Data Source=sql02;User id=aadhi;Password=Secret;"
+				}
+			]
+		}
+	]
+}

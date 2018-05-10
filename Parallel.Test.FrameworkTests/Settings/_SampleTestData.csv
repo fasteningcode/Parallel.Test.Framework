@@ -1,0 +1,4 @@
+TestCaseId,TestName,TetDescription,DefaultTestData,RegressionSuite,SanitySuite,TestDataNumber,username,password,updateUsername,updatePassword
+tc1,"sample test ma,e",sample Test Description ,1,"1,2,3,4",1,1,john,john,,
+,,,,,,,"w,im",wim,,
+tc2,Test Name 2 ,sample Test Description 2,"1,1,","1,2",1,1,,,ed,ed

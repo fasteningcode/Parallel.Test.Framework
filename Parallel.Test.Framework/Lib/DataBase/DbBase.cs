@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
 using AventStack.ExtentReports;
 using Parallel.Test.Framework.Base.Reports;
 
@@ -16,7 +15,7 @@ namespace Parallel.Test.Framework.Lib.DataBase {
                 return sqlConnection;
             }
             catch (Exception e) {
-                Console.WriteLine(Status.Info + " Error " + e.Message);
+                Console.WriteLine($@"{Status.Info} Error {e.Message}");
             }
 
             return null;

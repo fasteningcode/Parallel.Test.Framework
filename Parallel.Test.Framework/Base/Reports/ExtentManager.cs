@@ -9,7 +9,7 @@ namespace Parallel.Test.Framework.Base.Reports
 {
     public class ExtentManager
     {
-        private static readonly Lazy<ExtentReports> _lazy = new Lazy<ExtentReports>(() => new ExtentReports());
+        private static readonly Lazy<ExtentReports> Lazy = new Lazy<ExtentReports>(() => new ExtentReports());
 
         static ExtentManager()
         {
@@ -25,6 +25,6 @@ namespace Parallel.Test.Framework.Base.Reports
 
         //private ExtentManager() { }
 
-        public static ExtentReports Instance => _lazy.Value;
+        public static ExtentReports Instance => Lazy.Value;
     }
 }

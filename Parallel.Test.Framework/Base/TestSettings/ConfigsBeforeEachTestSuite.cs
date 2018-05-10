@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Xml;
 using Newtonsoft.Json.Linq;
 using Parallel.Test.Framework.Constants;
 using Parallel.Test.Framework.Lib.Json;
@@ -57,7 +56,7 @@ namespace Parallel.Test.Framework.Base.TestSettings {
             }
             catch (Exception e)
             {
-                Console.WriteLine("Error in Reading from TestSettings.json file" + e);
+                Console.WriteLine(@"Error in Reading from TestSettings.json file" + e);
             }
 
             return data;
@@ -66,8 +65,8 @@ namespace Parallel.Test.Framework.Base.TestSettings {
         private static void Create_TestSettingsFileIfItDidntExists(string path, string value) {
 
 
-            if (!Directory.Exists(Assembly.Directory + ResourceConstants.SETTINGSPATH))
-                Directory.CreateDirectory(Assembly.Directory + ResourceConstants.SETTINGSPATH);
+            if (!Directory.Exists(ExecutionAssembly.Directory + ResourceConstants.SETTINGSPATH))
+                Directory.CreateDirectory(ExecutionAssembly.Directory + ResourceConstants.SETTINGSPATH);
             
             if (!File.Exists(path))
             {
@@ -81,9 +80,13 @@ namespace Parallel.Test.Framework.Base.TestSettings {
             }
         }
 
-        public void CreateSampleData(string testSettingsPath) {
+        public void CreateSampleDataJson(string testSettingsPath) {
+            const string value = "{\r\n\t\"TestCases\": [\r\n\t\t{\r\n\t\t\t\"TestCaseId\": \"tc1\",\r\n\t\t\t\"TestName\": \"sample test ma,e\",\r\n\t\t\t\"TetDescription\": \"sample Test Description \",\r\n\t\t\t\"TestRow\": [\r\n\t\t\t\t{\r\n\t\t\t\t\t\"TestDataNumber\": \"1\",\r\n\t\t\t\t\t\"TestData\": [\r\n\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\t\"username\": \"john\",\r\n\t\t\t\t\t\t\t\"password\": \"john\"\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t]\r\n\t\t\t\t},{\r\n\t\t\t\t\t\"TestDataNumber\": \"2\",\r\n\t\t\t\t\t\"TestData\": [\r\n\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\t\"username\": \"w,im\",\r\n\t\t\t\t\t\t\t\"password\": \"wim\"\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t]\r\n\t\t\t\t}\r\n\t\t\t],\"DefaultTestData\" :  \"1\",\r\n\t\t\t\"RegressionSuite\": \"1,2,3,4\",\r\n\t\t\t\"SanitySuite\": \"1\"\r\n\t\t},{\r\n\t\t\t\"TestCaseId\": \"tc2\",\r\n\t\t\t\"TestName\": \"Test Name 2 \",\r\n\t\t\t\"TetDescription\": \"sample Test Description 2\",\r\n\t\t\t\"TestRow\": [\r\n\t\t\t\t{\r\n\t\t\t\t\t\"TestDataNumber\": \"1\",\r\n\t\t\t\t\t\"TestData\": [\r\n\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\t\"updateUsername\": \"ed\",\r\n\t\t\t\t\t\t\t\"updatePassword\": \"ed\"\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t]\r\n\t\t\t\t}\r\n\t\t\t],	\t\"DefaultTestData\" :  \"1,1,1,1,1\",\r\n\t\t\t\"RegressionSuite\": \"1,2\",\r\n\t\t\t\"SanitySuite\": \"1\"\r\n\t\t}\r\n\t]\r\n\r\n}";
+            Create_TestSettingsFileIfItDidntExists(testSettingsPath, value);
+        }
 
-            var value = "{\r\n\t\"TestCases\": [{\r\n\t\t\"TestCaseId\": \"tc1\",\r\n\t\t\"TestName\": \"sample test ma,e\",\r\n\t\t\"TetDescription\": \"sample Test Description \",\r\n\t\t\"TestRow\": [{\r\n\t\t\t\t\"RowNumber\": \"1\",\r\n\t\t\t\t\"TestData\": [{\r\n\t\t\t\t\t\"username\": \"john\",\r\n\t\t\t\t\t\"password\": \"john\"\r\n\t\t\t\t}]\r\n\t\t\t}\r\n\r\n\t\t]\r\n\t}],\r\n\t\"RegressionSuite\": \"1,2\",\r\n\t\"SanitySuite\": \"1\"\r\n}";
+        public void CreateSampleDataCsv(string testSettingsPath) {
+            const string value = "TestCaseId,TestName,TetDescription,DefaultTestData,RegressionSuite,SanitySuite,TestDataNumber,username,password,updateUsername,updatePassword\r\ntc1,\"sample test ma,e\",sample Test Description ,1,\"1,2,3,4\",1,1,john,john,,\r\n,,,,,,,\"w,im\",wim,,\r\ntc2,Test Name 2 ,sample Test Description 2,\"1,1,\",\"1,2\",1,1,,,ed,ed\r\n";
             Create_TestSettingsFileIfItDidntExists(testSettingsPath, value);
         }
     }
